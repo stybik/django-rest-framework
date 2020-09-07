@@ -30,8 +30,8 @@ def article_list(request):
 @api_view(['GET', 'PUT', 'DELETE'])
 def article_detail(request, pk):
 	"""get details of single article, 
-	update article,
-	delete article"""
+	update an article,
+	delete an article"""
 	try:
 		article = Article.objects.get(id=pk)
 	except Article.DoestNotExist:
